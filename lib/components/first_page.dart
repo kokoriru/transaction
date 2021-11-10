@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:transition/components/next_page.dart';
 
 class FirstPage extends StatelessWidget {
   @override
@@ -15,16 +14,10 @@ class FirstPage extends StatelessWidget {
           child: Column(
             children: <Widget>[
               ElevatedButton(onPressed: () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context)=>NextPage(),)
-                )
+                Navigator.pushNamed(context, '/next')
               }, child: Text('Nextページへ(戻れるボタン)'),),
               ElevatedButton(onPressed: () => {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context)=>NextPage(),)
-                )
+                Navigator.pushReplacementNamed(context, '/next')
               }, child: Text('Nextページへ(戻れないボタン)'),),
             ],
           ),

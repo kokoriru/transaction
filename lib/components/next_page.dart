@@ -16,7 +16,7 @@ class NextPage extends StatelessWidget {
             children: <Widget>[
               ElevatedButton(onPressed: () => {
                 if (Navigator.canPop(context)) {
-                  Navigator.pop(context)
+                  Navigator.popUntil(context, ModalRoute.withName('/'))
                 } else {
                   SystemNavigator.pop()
                 }
