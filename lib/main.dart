@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:transition/components/first_page.dart';
+import 'package:transition/components/next_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: FirstPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => FirstPage(),
+        '/next': (context) => NextPage(),
+      },
     );
   }
 }
