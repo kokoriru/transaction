@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:transition/components/next_page.dart';
+
 class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,13 @@ class FirstPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(builder: (context)=>NextPage(),)
                 )
-              }, child: Text('Nextページへ'),)
+              }, child: Text('Nextページへ(戻れるボタン)'),),
+              ElevatedButton(onPressed: () => {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context)=>NextPage(),)
+                )
+              }, child: Text('Nextページへ(戻れないボタン)'),),
             ],
           ),
         ),
