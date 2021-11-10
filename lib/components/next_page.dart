@@ -13,11 +13,16 @@ class NextPage extends StatelessWidget {
         child: Center(
           child: Column(
             children: <Widget>[
-              ElevatedButton(onPressed: () => {}, child: Text('Firstページに戻る'),)
+              ElevatedButton(onPressed: () => {
+                if (Navigator.canPop(context)) {
+                  Navigator.pop(context)
+                } else {
+                  SystemNavigator.pop()
+                }
+              }, child: Text('Firstページに戻る'),),
             ],
           ),
         ),
       ),
     );
   }
-}
