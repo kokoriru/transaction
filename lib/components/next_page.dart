@@ -27,3 +27,4 @@ class NextPage extends StatelessWidget {
       ),
     );
   }
+}
