@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:transition/components/next_page.dart';
 class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,12 @@ class FirstPage extends StatelessWidget {
         child: Center(
           child: Column(
             children: <Widget>[
-              RaisedButton(onPressed: () => {}, child: Text('Nextページへ'),)
+              RaisedButton(onPressed: () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context)=>NextPage(),)
+                )
+              }, child: Text('Nextページへ'),)
             ],
           ),
         ),
