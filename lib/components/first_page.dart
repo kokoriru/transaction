@@ -13,7 +13,7 @@ class FirstPage extends StatelessWidget {
         child: Center(
           child: Column(
             children: <Widget>[
-              RaisedButton(onPressed: () => {
+              ElevatedButton(onPressed: () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context)=>NextPage(),)

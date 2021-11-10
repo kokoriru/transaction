@@ -13,7 +13,7 @@ class NextPage extends StatelessWidget {
         child: Center(
           child: Column(
             children: <Widget>[
-              RaisedButton(onPressed: () => {}, child: Text('Firstページに戻る'),)
+              ElevatedButton(onPressed: () => {}, child: Text('Firstページに戻る'),)
             ],
           ),
         ),
